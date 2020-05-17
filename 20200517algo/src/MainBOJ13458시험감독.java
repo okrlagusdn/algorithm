@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main13458시험감독 {
+public class MainBOJ13458시험감독 {
 	static int N, B, C;
 	static long result=0;
 	static int[] A;
