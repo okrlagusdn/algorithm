@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class MainBOJ16236¾Æ±â»ó¾î {
+public class MainBOJ16236ì•„ê¸°ìƒì–´ {
 	static int N, sec=0, result=0, eat=0;
 	static int[][] arr;
 	static int[] dx = {-1,1,0,0};
@@ -55,14 +55,14 @@ public class MainBOJ16236¾Æ±â»ó¾î {
 	private static void bfs(int sx, int sy) {
 		Queue<SPoint> q = new LinkedList<>();
 		q.add(new SPoint(sx, sy, 2));
+		visited[sx][sy]=true;
 		while(!q.isEmpty()) {
-			visited[sx][sy]=true;
 			int size = q.size();
 			PriorityQueue<SPoint> pq = new PriorityQueue<>();
 			int flag=0;
 			for(int k=0;k<size;k++) {
 				SPoint p = q.poll();
-				//¸ÔÀ»¼ö ÀÖ´Â ³ğÀÌ ³ª¿Â ¼ø°£ size for¹® ³¡³ª°í qºñ¿î´Ù... -> ¿ì¼±¼øÀ§Å¥¿¡ ¸ÔÀ»¼ö ÀÖ´Â ¹°°í±â ³Ö°í Á¤·ÄÇÏ°í peek»Ì°í, ±×ÀÚ¸®¿¡ »ó¾î À§Ä¡ ½ÃÅ°°í ´Ù½Ã µ¹¸²
+				//ë¨¹ì„ìˆ˜ ìˆëŠ” ë†ˆì´ ë‚˜ì˜¨ ìˆœê°„ size forë¬¸ ëë‚˜ê³  që¹„ìš´ë‹¤... -> ìš°ì„ ìˆœìœ„íì— ë¨¹ì„ìˆ˜ ìˆëŠ” ë¬¼ê³ ê¸° ë„£ê³  ì •ë ¬í•˜ê³  peekë½‘ê³ , ê·¸ìë¦¬ì— ìƒì–´ ìœ„ì¹˜ ì‹œí‚¤ê³  ë‹¤ì‹œ ëŒë¦¼
 				for(int i=0;i<4;i++) {
 					int tx = p.x+dx[i];
 					int ty = p.y+dy[i];
@@ -95,7 +95,8 @@ public class MainBOJ16236¾Æ±â»ó¾î {
 				}
 				arr[p2.x][p2.y] = 0;
 				q.add(new SPoint(p2.x, p2.y, p2.size));
-				System.out.println(p2.x+" "+p2.y +" " +sec+"ÃÊ");
+				visited[p2.x][p2.y]=true;
+//				System.out.println(p2.x+" "+p2.y +" " +sec+"ì´ˆ");
 				result+=sec;
 				sec=0;
 			}
