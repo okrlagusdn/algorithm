@@ -55,8 +55,8 @@ public class MainBOJ16236아기상어 {
 	private static void bfs(int sx, int sy) {
 		Queue<SPoint> q = new LinkedList<>();
 		q.add(new SPoint(sx, sy, 2));
+		visited[sx][sy]=true;
 		while(!q.isEmpty()) {
-			visited[sx][sy]=true;
 			int size = q.size();
 			PriorityQueue<SPoint> pq = new PriorityQueue<>();
 			int flag=0;
@@ -95,7 +95,8 @@ public class MainBOJ16236아기상어 {
 				}
 				arr[p2.x][p2.y] = 0;
 				q.add(new SPoint(p2.x, p2.y, p2.size));
-				System.out.println(p2.x+" "+p2.y +" " +sec+"초");
+				visited[p2.x][p2.y]=true;
+//				System.out.println(p2.x+" "+p2.y +" " +sec+"초");
 				result+=sec;
 				sec=0;
 			}
