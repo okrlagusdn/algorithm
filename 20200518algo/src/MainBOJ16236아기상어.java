@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class MainBOJ16236¾Æ±â»ó¾î {
+public class MainBOJ16236ì•„ê¸°ìƒì–´ {
 	static int N, sec=0, result=0, eat=0;
 	static int[][] arr;
 	static int[] dx = {-1,1,0,0};
@@ -62,7 +62,7 @@ public class MainBOJ16236¾Æ±â»ó¾î {
 			int flag=0;
 			for(int k=0;k<size;k++) {
 				SPoint p = q.poll();
-				//¸ÔÀ»¼ö ÀÖ´Â ³ğÀÌ ³ª¿Â ¼ø°£ size for¹® ³¡³ª°í qºñ¿î´Ù... -> ¿ì¼±¼øÀ§Å¥¿¡ ¸ÔÀ»¼ö ÀÖ´Â ¹°°í±â ³Ö°í Á¤·ÄÇÏ°í peek»Ì°í, ±×ÀÚ¸®¿¡ »ó¾î À§Ä¡ ½ÃÅ°°í ´Ù½Ã µ¹¸²
+				//ç™’ë±€ì“£ï¿½ë‹” ï¿½ì—³ï¿½ë’— ï¿½ëƒ¸ï¿½ì”  ï¿½êµ¹ï¿½ì‚© ï¿½ë‹šåª›ï¿½ size forè‡¾ï¿½ ï¿½ê±¹ï¿½êµ¹æ€¨ï¿½ qé®ê¾©ìŠ«ï¿½ë–... -> ï¿½ìŠ¦ï¿½ê½‘ï¿½ë‹šï¿½ìï¿½ê±§ï¿½ë¿‰ ç™’ë±€ì“£ï¿½ë‹” ï¿½ì—³ï¿½ë’— è‡¾ì‡¨í€¬æ¹²ï¿½ ï¿½ê½”æ€¨ï¿½ ï¿½ì ™ï¿½ì ¹ï¿½ë¸¯æ€¨ï¿½ peekï§’ë¬í€¬, æ´¹ëª„ì˜„ç”±ÑŠë¿‰ ï¿½ê¸½ï¿½ë¼± ï¿½ìç§»ï¿½ ï¿½ë–†ï¿½ê¶æ€¨ï¿½ ï¿½ë–ï¿½ë–† ï¿½ë£ç”±ï¿½
 				for(int i=0;i<4;i++) {
 					int tx = p.x+dx[i];
 					int ty = p.y+dy[i];
@@ -96,11 +96,9 @@ public class MainBOJ16236¾Æ±â»ó¾î {
 				arr[p2.x][p2.y] = 0;
 				q.add(new SPoint(p2.x, p2.y, p2.size));
 				visited[p2.x][p2.y]=true;
-//				System.out.println(p2.x+" "+p2.y +" " +sec+"ÃÊ");
 				result+=sec;
 				sec=0;
 			}
-//			sec++;
 		}
 	}
 }
