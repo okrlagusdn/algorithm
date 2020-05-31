@@ -42,7 +42,6 @@ public class SolutionSWEA4008숫자만들기 {
 			if(max<num) {
 				max = num;
 			}
-			System.out.println(max);
 			return;
 		}
 		for(int i=0;i<4;i++) {
