@@ -11,7 +11,7 @@ public class MainBOJ13458시험감독 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = null;
-		N = Integer.parseInt(br.readLine());
+		N = Integer.parseInt(br.readLine()); 
 		A = new int[N];
 		st = new StringTokenizer(br.readLine());
 		for(int i=0;i<N;i++) {
