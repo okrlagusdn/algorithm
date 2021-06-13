@@ -1,25 +1,25 @@
-//ÃÖ´ë°ªÀÌ 21¾ï°³°¡ ³ÑÀ¸¹Ç·Î °á°ú º¯¼ö Å¸ÀÔÀ» longÀ¸·Î ÇØÁà¾ßµÊ....
-import java.io.BufferedReader;
+//ìµœëŒ€ê°’ì´ 21ì–µê°œê°€ ë„˜ìœ¼ë¯€ë¡œ ê²°ê³¼ ë³€ìˆ˜ íƒ€ì…ì„ longìœ¼ë¡œ í•´ì¤˜ì•¼ë¨....
+import java.io.BufferedReader; 
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class MainBOJ13458½ÃÇè°¨µ¶ {
+public class MainBOJ13458ì‹œí—˜ê°ë… {
 	static int N, B, C;
 	static long result=0;
 	static int[] A;
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = null;
-		N = Integer.parseInt(br.readLine());
+		N = Integer.parseInt(br.readLine()); 
 		A = new int[N];
 		st = new StringTokenizer(br.readLine());
 		for(int i=0;i<N;i++) {
 			A[i] = Integer.parseInt(st.nextToken());
 		}
 		st = new StringTokenizer(br.readLine());
-		B = Integer.parseInt(st.nextToken());//ÃÑ°¨µ¶ÀÌ °¨½ÃÇÒ¼ö ÀÖ´Â »ç¶÷¼ö
-		C = Integer.parseInt(st.nextToken());//ºÎ°¨µ¶ÀÌ °¨½ÃÇÒ¼ö ÀÖ´Â »ç¶÷¼ö
+		B = Integer.parseInt(st.nextToken());//ì´ê°ë…ì´ ê°ì‹œí• ìˆ˜ ìˆëŠ” ì‚¬ëŒìˆ˜
+		C = Integer.parseInt(st.nextToken());//ë¶€ê°ë…ì´ ê°ì‹œí• ìˆ˜ ìˆëŠ” ì‚¬ëŒìˆ˜
 		for(int i=0;i<N;i++) {
 			A[i]-=B;
 			result++;
